@@ -12,18 +12,35 @@
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <script>
-    ons.ready(function() {
-      console.log("Onsen UI is ready!");
-    });
-
-    if (ons.platform.isIPhoneX()) {
-      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
-      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
-    }
-  </script>
+ 
 </head>
 <body>
-  This is a template for Onsen UI app.
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h3>plugin</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-primary btn-block" id="alerta">alerta</button>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-primary btn-block" id="confirm">confirm</button>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-primary btn-block" id="beep">beep</button>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-sm">
+      <button class="btn btn-primary btn-block" id="vibrar">vibrar</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
