@@ -4,6 +4,7 @@ $(document).on("click","#alerta",function(){
 navigator.notification.alert("minha mensagem",null,"Aviso","Aceito");
 });
 
+
 $(document).on("click","#confirm",function(){
   function confirma(buttonIndex){
     if(buttonIndex == 1){
@@ -24,11 +25,21 @@ $(document).on("click","#vibrar",function(){
    navigator.vibrate(40000);
 });
 
+function mostramapa(lat, long){
+     L.mapquest.key = 'D4O8BTFd9abcGfDhG8AnewduZ8E7kaSH';
+
+        var map = L.mapquest.map('map', {
+          center: [lat, long],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 16
+        });
+
+        map.addControl(L.mapquest.control());
+}
+
 $(document).on("click","#local",function(){
     var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n');
-              
+      mostramapa(position.coords.latitude, position.coords.longitude)
     };
 
     
